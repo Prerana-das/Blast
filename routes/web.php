@@ -16,4 +16,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('Ga','GalleryController@index');
+Route::get('gallery','GalleryController@index');
+
+Route::get('admin','AdminController@index');
