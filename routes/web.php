@@ -19,3 +19,4 @@ Route::get('/', function () {
 Route::get('gallery','GalleryController@index');
 
 Route::get('admin','AdminController@index');
+Route::post('admin/save','AdminController@save');

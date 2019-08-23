@@ -23,6 +23,8 @@
 		@include('shared.admin.header')
 	
 		@yield('content')
+
+		 @yield('box')
 		
 		@include('shared.admin.footer')
 

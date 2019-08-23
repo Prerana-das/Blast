@@ -12,4 +12,6 @@ class GalleryController extends Controller
     
     	return view('user.user');
     }
+
+
 }
