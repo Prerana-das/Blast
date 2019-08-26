@@ -11,12 +11,23 @@
 |
 */
 
-Route::get('/', function () {
+
+Route::get('/','GalleryController@index');
+
+Route::get('wel', function () {
     return view('welcome');
 });
 
 
-Route::get('gallery','GalleryController@index');
+
+//_________________________Admin________________________
+Route::group(['middleware' => ['admin']], function () {
 
 Route::get('admin','AdminController@index');
 Route::post('admin/save','AdminController@save');
+
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
